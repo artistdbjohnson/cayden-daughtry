@@ -1,10 +1,19 @@
 import Hero from '@/components/Hero'
+import JourneySection from '@/components/journey/JourneySection'
+import Stats from '@/components/Stats'
+import Media from '@/components/Media'
+import Recognition from '@/components/Recognition'
+import Contact from '@/components/Contact'
 
 export default function Home() {
   return (
-    <main>
+    <main className="bg-paper text-ink min-h-screen">
       <Hero />
-      {/* Journey, Stats, Media, Recognition, Contact to follow */}
+      <JourneySection />
+      <Stats />
+      <Media />
+      <Recognition />
+      <Contact />
     </main>
   )
 }
