@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --paper: oklch(0.08 0.01 250);
+  --surface: oklch(0.14 0.015 250);
+  --ink: oklch(0.96 0.01 95);
+  --ice: oklch(0.78 0.14 210);
+  --heat: oklch(0.68 0.19 35);
+  --muted: oklch(0.55 0.02 250);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .motion-heavy, .r3f-canvas {
+    display: none !important;
+  }
+  .reduced-fallback {
+    display: block !important;
+  }
+}
